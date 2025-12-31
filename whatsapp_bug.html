@@ -278,5 +278,47 @@
     </audio>
     
     <script src="script.js"></script>
+    <!-- Audio Preloader (Hidden) -->
+<div style="display:none;">
+    <audio id="preloadAudio1" preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="preloadAudio2" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3" type="audio/mpeg">
+    </audio>
+    <button id="hiddenAudioUnlock" style="display:none;"></button>
+</div>
+
+<script>
+    // Force audio preload dan unlock
+    window.addEventListener('load', function() {
+        // Preload audio files
+        const audio1 = document.getElementById('preloadAudio1');
+        const audio2 = document.getElementById('preloadAudio2');
+        
+        // Coba play dan pause untuk unlock
+        setTimeout(() => {
+            audio1.volume = 0.001;
+            audio1.play().then(() => {
+                audio1.pause();
+                audio1.currentTime = 0;
+            }).catch(e => console.log('Preload 1 failed'));
+            
+            audio2.volume = 0.001;
+            audio2.play().then(() => {
+                audio2.pause();
+                audio2.currentTime = 0;
+            }).catch(e => console.log('Preload 2 failed'));
+            
+            // Click hidden button untuk unlock
+            document.getElementById('hiddenAudioUnlock').click();
+        }, 1000);
+    });
+    
+    // Auto-click pada body setelah 2 detik (unlock audio)
+    setTimeout(() => {
+        document.body.click();
+    }, 2000);
+                   </script>
 </body>
 </html>
