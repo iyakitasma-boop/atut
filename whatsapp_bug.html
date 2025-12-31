@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WhatsApp Bug Exploit Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://static.whatsapp.net/rsrc.php/v3/yP/r/rYZqPCBaG70.png">
+</head>
+<body>
+    <!-- Vibration Overlay -->
+    <div class="vibration-overlay" id="vibrationOverlay"></div>
+    
+    <!-- Scanlines -->
+    <div class="scanlines"></div>
+    
+    <!-- Glitch Effect -->
+    <div class="glitch-overlay"></div>
+    
+    <!-- Main Container -->
+    <div class="container" id="mainContainer">
+        <div class="header">
+            <div class="logo">
+                <i class="fab fa-whatsapp"></i>
+                <div class="verified-badge">
+                    <i class="fas fa-check-circle"></i>
+                    VERIFIED
+                </div>
+            </div>
+            <h1>
+                <span class="glitch-text" data-text="WHATSAPP BUG EXPLOIT">WHATSAPP BUG EXPLOIT</span>
+            </h1>
+            <div class="version">v8.5.2 <span class="online-dot"></span> ONLINE</div>
+        </div>
+        
+        <div class="subtitle">
+            <i class="fas fa-shield-alt"></i> Official WhatsApp Vulnerability Scanner
+        </div>
+        
+        <div class="warning-banner">
+            <i class="fas fa-exclamation-triangle"></i>
+            CRITICAL SECURITY FLAW DETECTED - Use with extreme caution!
+        </div>
+        
+        <!-- Target Input -->
+        <div class="input-card">
+            <div class="input-header">
+                <i class="fas fa-crosshairs"></i>
+                <h3>TARGET INFORMATION</h3>
+            </div>
+            <div class="input-group">
+                <label for="targetNumber">
+                    <i class="fas fa-phone-alt"></i> TARGET PHONE NUMBER
+                </label>
+                <input type="tel" id="targetNumber" placeholder="+62 812-3456-7890" value="+62" maxlength="20">
+                <div class="input-hint">
+                    <i class="fas fa-info-circle"></i> Include country code (e.g., +62 for Indonesia)
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="targetName">
+                    <i class="fas fa-user-tag"></i> TARGET NAME (Optional)
+                </label>
+                <input type="text" id="targetName" placeholder="John Doe">
+            </div>
+        </div>
+        
+        <!-- Exploit Methods -->
+        <div class="input-card">
+            <div class="input-header">
+                <i class="fas fa-biohazard"></i>
+                <h3>SELECT EXPLOIT METHOD</h3>
+            </div>
+            
+            <div class="methods-grid">
+                <div class="method-card" data-method="crash">
+                    <div class="method-icon">
+                        <i class="fas fa-bomb"></i>
+                        <span class="method-badge danger">CRITICAL</span>
+                    </div>
+                    <div class="method-content">
+                        <h4>1. CRASH EXPLOIT</h4>
+                        <p>Force immediate WhatsApp shutdown and device freeze</p>
+                        <div class="method-stats">
+                            <span><i class="fas fa-bolt"></i> Success Rate: 97%</span>
+                            <span><i class="fas fa-clock"></i> Duration: Instant</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card" data-method="infinity">
+                    <div class="method-icon">
+                        <i class="fas fa-infinity"></i>
+                        <span class="method-badge warning">HIGH</span>
+                    </div>
+                    <div class="method-content">
+                        <h4>2. INFINITY LOOP</h4>
+                        <p>Endless notification spam causing system overload</p>
+                        <div class="method-stats">
+                            <span><i class="fas fa-bolt"></i> Success Rate: 92%</span>
+                            <span><i class="fas fa-clock"></i> Duration: 30 seconds</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card" data-method="restart">
+                    <div class="method-icon">
+                        <i class="fas fa-redo-alt"></i>
+                        <span class="method-badge danger">CRITICAL</span>
+                    </div>
+                    <div class="method-content">
+                        <h4>3. FORCED RESTART</h4>
+                        <p>Trigger device reboot and data corruption</p>
+                        <div class="method-stats">
+                            <span><i class="fas fa-bolt"></i> Success Rate: 88%</span>
+                            <span><i class="fas fa-clock"></i> Duration: 15 seconds</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card" data-method="invisible">
+                    <div class="method-icon">
+                        <i class="fas fa-eye-slash"></i>
+                        <span class="method-badge success">STEALTH</span>
+                    </div>
+                    <div class="method-content">
+                        <h4>4. INVISIBILITY MODE</h4>
+                        <p>Hide target account from all contacts</p>
+                        <div class="method-stats">
+                            <span><i class="fas fa-bolt"></i> Success Rate: 95%</span>
+                            <span><i class="fas fa-clock"></i> Duration: Permanent</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card" data-method="reset">
+                    <div class="method-icon">
+                        <i class="fas fa-database"></i>
+                        <span class="method-badge danger">DESTRUCTIVE</span>
+                    </div>
+                    <div class="method-content">
+                        <h4>5. FACTORY RESET</h4>
+                        <p>Complete WhatsApp data wipe and account reset</p>
+                        <div class="method-stats">
+                            <span><i class="fas fa-bolt"></i> Success Rate: 100%</span>
+                            <span><i class="fas fa-clock"></i> Duration: 60 seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Security Level -->
+        <div class="input-card">
+            <div class="input-header">
+                <i class="fas fa-user-secret"></i>
+                <h3>ANONYMITY LEVEL</h3>
+            </div>
+            <div class="slider-container">
+                <input type="range" id="anonymityLevel" min="1" max="10" value="10">
+                <div class="slider-labels">
+                    <span>LOW STEALTH</span>
+                    <span class="active">MAXIMUM ANONYMITY <i class="fas fa-mask"></i></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Start Button -->
+        <button class="start-btn" id="startBtn">
+            <div class="btn-content">
+                <i class="fas fa-rocket"></i>
+                <div class="btn-text">
+                    <div class="btn-title">INITIATE EXPLOIT</div>
+                    <div class="btn-subtitle">Press to activate bug sequence</div>
+                </div>
+                <div class="btn-countdown">10</div>
+            </div>
+            <div class="btn-pulse"></div>
+        </button>
+        
+        <!-- Log Console -->
+        <div class="log-console" id="logConsole">
+            <div class="log-header">
+                <i class="fas fa-terminal"></i>
+                <h4>EXPLOIT EXECUTION LOG</h4>
+                <div class="log-status">
+                    <span class="status-dot"></span> SYSTEM READY
+                </div>
+            </div>
+            <div class="log-content" id="logContent">
+                <div class="log-entry system">[SYSTEM] WhatsApp Bug Exploit v8.5.2 initialized</div>
+                <div class="log-entry system">[SECURITY] VPN tunnel established</div>
+                <div class="log-entry system">[ENCRYPTION] AES-256 bit encryption active</div>
+                <div class="log-entry info">[INFO] Select target and method to begin</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-item">
+                <i class="fas fa-server"></i>
+                <span>SERVER: exploit.whatsapp.bug:443</span>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-user-shield"></i>
+                <span>CONNECTION: SECURE</span>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-clock"></i>
+                <span id="currentTime">00:00:00 UTC</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Exploit Overlay (Fullscreen) -->
+    <div class="exploit-overlay" id="exploitOverlay">
+        <div class="exploit-content">
+            <div class="exploit-header">
+                <div class="exploit-title">
+                    <i class="fas fa-radiation-alt"></i>
+                    <span>EXPLOIT EXECUTION IN PROGRESS</span>
+                    <i class="fas fa-radiation-alt"></i>
+                </div>
+                <div class="exploit-subtitle" id="exploitSubtitle">DO NOT CLOSE OR INTERRUPT</div>
+            </div>
+            
+            <div class="exploit-animation">
+                <div class="virus-scan">
+                    <div class="virus-line"></div>
+                    <div class="virus-line"></div>
+                    <div class="virus-line"></div>
+                    <div class="virus-particle"></div>
+                    <div class="virus-particle"></div>
+                    <div class="virus-particle"></div>
+                </div>
+                
+                <div class="exploit-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <div class="progress-text" id="progressText">INITIALIZING PAYLOAD...</div>
+                </div>
+                
+                <div class="target-info" id="targetInfo">
+                    <!-- Diisi JS -->
+                </div>
+                
+                <div class="countdown-display">
+                    <div class="countdown-title">EXPLOIT COMPLETION IN</div>
+                    <div class="countdown-timer" id="countdownTimer">--:--</div>
+                </div>
+                
+                <div class="emergency-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>DEVICE VIBRATION & AUDIO WILL ACTIVATE</span>
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+            </div>
+            
+            <div class="exploit-log" id="exploitLog">
+                <!-- Diisi JS -->
+            </div>
+            
+            <div class="exploit-footer">
+                <div class="blocker-text">
+                    <i class="fas fa-ban"></i>
+                    HOME & BACK BUTTONS DISABLED
+                </div>
+                <div class="restart-hint">
+                    Device may restart automatically upon completion
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Audio Element -->
+    <audio id="bugAudio" loop>
+        <!-- Audio akan di-set via JavaScript -->
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
